@@ -2,15 +2,21 @@ import streamlit as st
 from PIL import Image
 
 # Title and Header with Photo Section
-st.markdown("<h1 style='color: darkblue; font-style: italic;'>Anchal Mishra</h1>", unsafe_allow_html=True)
-st.write("Hey, Nice to meet you!!!!!")
+st.markdown("<h1 style='color: teal; font-style: italic; text-align: center; font-family: cursive;'>Anchal Mishra</h1>", unsafe_allow_html=True)
 
-col1, col2 = st.columns([1, 3])
+col1, col2 = st.columns([3, 1])
 with col1:
-    st.image("https://via.placeholder.com/150", caption="Your Photo", width=150)
+    st.markdown("<h2 style='color: teal; font-style: italic;'>Content Analyst</h2>", unsafe_allow_html=True)
+    st.markdown(
+        "<p style='font-size: smaller;'>"
+        "<b><a href='https://linkedin.com/in/anchal-mishra-b73109171' target='_blank' style='color: teal;'>LinkedIn</a></b> | "
+        "<b><a href='mailto:anchalmishra028@gmail.com' style='color: teal;'>Email</a></b> | "
+        "<b>Contact Number:</b> +91 8429745889"
+        "</p>",
+        unsafe_allow_html=True
+    )
 with col2:
-    st.markdown("<h2 style='color: darkblue; font-style: italic;'>Content Analyst</h2>", unsafe_allow_html=True)
-    st.write("### [LinkedIn](https://linkedin.com/in/anchal-mishra-b73109171) | [Email](mailto:anchalmishra028@gmail.com) | +91 8429745889")
+    st.image("https://via.placeholder.com/150", caption="Your Photo", width=150)
 
 # Profile Section
 st.markdown("<h2 style='color: peru; font-style: italic;'>Profile</h2>", unsafe_allow_html=True)
@@ -72,6 +78,18 @@ st.write("\n".join(f"- {achievement}" for achievement in achievements))
 st.markdown("<h2 style='color: peru; font-style: italic;'>Languages</h2>", unsafe_allow_html=True)
 st.write("English | French | Hindi")
 
-# Footer Section
+# Footer Section with Contact Button
 st.markdown("---")
 st.write("Designed and developed by Anchal Mishra")
+
+# Contact Me Button
+contact_me_html = """
+<div style='display: flex; justify-content: center;'>
+    <a href='mailto:anchalmishra028@gmail.com' target='_blank' style='text-decoration: none;'>
+        <button style='background-color: teal; color: white; padding: 10px 20px; border: none; border-radius: 50px; font-size: 16px; cursor: pointer;'>
+            Contact Me
+        </button>
+    </a>
+</div>
+"""
+st.markdown(contact_me_html, unsafe_allow_html=True)
