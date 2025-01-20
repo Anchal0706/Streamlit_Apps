@@ -3,7 +3,7 @@ from PIL import Image
 
 # Title and Header with Photo Section
 st.markdown("<h1 style='color: teal; font-style: italic; text-align: center; font-family: cursive;'>Anchal Mishra</h1>", unsafe_allow_html=True)
-
+st.write("Arpit is ds")
 col1, col2 = st.columns([3, 1])
 with col1:
     st.markdown("<h2 style='color: teal; font-style: italic;'>Content Analyst</h2>", unsafe_allow_html=True)
